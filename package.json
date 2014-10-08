@@ -1,0 +1,25 @@
+{
+  "name": "fantasy-football",
+  "version": "0.0.1",
+  "description": "An app to build your dream football team",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfraboni/fantasy-football.git"
+  },
+  "author": "sanderson, jfreeman, jfraboni, mgaudin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfraboni/fantasy-football/issues"
+  },
+  "homepage": "https://github.com/jfraboni/fantasy-football",
+  "dependencies": {
+    "prompt": "^0.2.14",
+    "csv": "^0.4.0",
+    "deep-extend": "^0.2.11",
+    "tsv": "^0.2.0"
+  }
+}
