@@ -1,9 +1,9 @@
 [
-    "Drew Brees",
-    "Christian Ponder",
-    "Blake Bortles",
-    "Peyton Manning",
-    "Tom Brady",
-    "Teddy Bridgewater",
-    "Matt Barkley"
+    {"firstName": "Drew", "lastName": "Brees"},
+    {"firstName": "Christian", "lastName": "Ponder"},
+    {"firstName": "Blake", "lastName": "Bortles"},
+    {"firstName": "Peyton", "lastName": "Manning"},
+    {"firstName": "Tom", "lastName": "Brady"},
+    {"firstName": "Teddy", "lastName": "Bridgewater"},
+    {"firstName": "Matt", "lastName": "Barkley"}
     ]
