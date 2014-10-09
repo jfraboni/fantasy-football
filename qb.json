@@ -1,9 +1,30 @@
 [
-    {"firstName": "Drew", "lastName": "Brees"},
-    {"firstName": "Christian", "lastName": "Ponder"},
-    {"firstName": "Blake", "lastName": "Bortles"},
-    {"firstName": "Peyton", "lastName": "Manning"},
-    {"firstName": "Tom", "lastName": "Brady"},
-    {"firstName": "Teddy", "lastName": "Bridgewater"},
-    {"firstName": "Matt", "lastName": "Barkley"}
-    ]
+    {
+        "person": {"firstName": "Drew", "lastName": "Brees"},
+        "stats": {"passingYards": "1574", "completions": "150"}
+    },
+    {
+        "person": {"firstName": "Christian", "lastName": "Ponder"},
+        "stats": {"passingYards": "659", "completions": "66"}
+    },
+    {
+        "person": {"firstName": "Blake", "lastName": "Bortles"},
+        "stats": {"passingYards": "653", "completions": "20"}
+    },
+    {
+        "person": {"firstName": "Peyton", "lastName": "Manning"},
+        "stats": {"passingYards": "1293", "completions": "105"}
+    },
+    {
+        "person": {"firstName": "Tom", "lastName": "Brady"},
+        "stats": {"passingYards": "759", "completions": "82"}
+    },
+    {
+        "person": {"firstName": "Teddy", "lastName": "Bridgewater"},
+        "stats": {"passingYards": "900", "completions": "31"}
+    },
+    {
+        "person": {"firstName": "Matt", "lastName": "Barkley"},
+        "stats": {"passingYards": "1256", "completions": "50"}
+    }
+]

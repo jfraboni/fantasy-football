@@ -16,53 +16,34 @@ module.exports.makePersonFromJSON = function (data) {
     return makePerson(data.firstName, data.lastName);
 };
 
-function makeQbProfile(person, runningYards, passingYards) {
-    var _profile = {
+function makeQuaterback(person, passingYards, completions) {
+    var _quarterback = {
         person: person,
-        runningYards: runningYards,
-        passingYards: passingYards
+        passingYards: passingYards,
+        completions: completions,
+        
+        toString: function () {
+            return "Name: " + person.name() + "\n\t" + "Passing Yards: " + passingYards + "\n\t" + "Completions: " + completions;
+        },
     };
-    return _profile;
+    return _quarterback;
 }
-module.exports.makeQbProfile = makeQbProfile;
+module.exports.makeQuaterback = makeQuaterback;
 
-function makeTeam(owner, qb) {
+module.exports.makeQuaterbackFromJSON = function (data) {
+    return makeQuaterback(makePerson(data.person.firstName, data.person.lastName), data.stats.passingYards, data.stats.completions);
+};
+
+function makeTeam(owner, name) {
     var _team = {
         owner: owner,
-        qb: qb,
-    }
+        name: name,
+        quarterback: null,
+        
+        toString: function () {
+            return "Team: " + _team.name + "\n" + "Owner: " + _team.owner.name() + "\n" + "Quarterback:\n\t" + _team.quarterback.toString();
+        },
+    };
     return _team;
 }
 module.exports.makeTeam = makeTeam;
-
-function makeQuiz(questions) {
-    var _quiz = {
-        questions: questions,
-    };
-    return _quiz;
-}
-module.exports.makeQuiz = makeQuiz;
-
-function makeQuestion(question) {
-    // declare a private variable within the factory closure //
-    var _answer = false;
-    
-    var _question = {
-        question:   question,
-        
-        setAnswer: function (answer) {
-            if (typeof answer === 'boolean') {
-                _answer = answer;
-            }
-        },
-        getAnswer: function () {
-            return _answer;
-        }
-    }
-    return _question;
-}
-module.exports.makeQuestion = makeQuestion;
-
-module.exports.makeQuestionFromJSON = function (data) {
-    return makeQuestion(data);
-}

@@ -80,23 +80,21 @@ function makeList(filepath, deserialize) {
         
         loadSync: function (filepath) {
             filepath = filepath ? filepath : _list.filepath;
-            fs.exists(filepath, function (exists) {
-                if (exists) {
-                    var data = fs.readFileSync(_list.filepath);
-                    var parsed;
-                    try {
-                        parsed = JSON.parse(data);
-                    } catch (err) {
-                        console.log('List.load > fs.fileRead : There was an error parsing JSON data:');
-                        console.log(err);
-                    }
-                    if (parsed) {
-                        for (var i = 0; i < parsed.length; i++) {
-                            _list.values.push(_list.deserialize(parsed[i]));
-                        }
+            if (fs.existsSync(filepath)) {
+                var data = fs.readFileSync(_list.filepath);
+                var parsed;
+                try {
+                    parsed = JSON.parse(data);
+                } catch (err) {
+                    console.log('List.load > fs.fileRead : There was an error parsing JSON data:');
+                    console.log(err);
+                }
+                if (parsed) {
+                    for (var i = 0; i < parsed.length; i++) {
+                        _list.values.push(_list.deserialize(parsed[i]));
                     }
                 }
-            });
+            }
             return _list;
         }
     };
