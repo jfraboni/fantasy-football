@@ -12,7 +12,7 @@ var quarterbacks = collections
         .loadSync();
 
 var team;
-var menu = view.makeMenu("(1) Make team, (2) Show Team, (q) quit", /^[1-9q]$/);
+var menu = view.makeMenu("(1) Make team, (q) quit", /^[1-9q]$/);
 menu.once('userInput', onUserInput);
 menu.show();
 
